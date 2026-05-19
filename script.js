@@ -1,5 +1,5 @@
 const video = document.querySelector('.player__video-viewer');
-const toggleBtn = document.querySelector('.player__button');
+const toggleBtn = document.querySelector('.toggle');
 const progress = document.querySelector('.progress');
 const progressFilled = document.querySelector('.progress__filled');
 const volumeSlider = document.querySelector('input[name="volume"]');
