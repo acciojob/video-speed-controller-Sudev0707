@@ -18,8 +18,10 @@ function togglePlay() {
 }
 
 function updateProgress() {
-  const percent = (video.currentTime / video.duration) * 100;
-  progressFilled.style.flexBasis = `${percent}%`;
+  if (video.duration) {
+    const percent = (video.currentTime / video.duration) * 100;
+    progressFilled.style.flexBasis = `${percent}%`;
+  }
 }
 
 function scrub(e) {
@@ -36,11 +38,11 @@ function handlePlayback() {
 }
 
 function rewind() {
-  video.currentTime -= 10;
+  video.currentTime = Math.max(0, video.currentTime - 10);
 }
 
 function forward() {
-  video.currentTime += 25;
+  video.currentTime = Math.min(video.duration, video.currentTime + 25);
 }
 
 video.addEventListener('click', togglePlay);
