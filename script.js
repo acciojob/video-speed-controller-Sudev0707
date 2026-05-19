@@ -1,6 +1,4 @@
-// Use this selector if .player__video is the video element itself
 const video = document.querySelector('.player__video');
-
 const toggleBtn = document.querySelector('.toggle');
 const progress = document.querySelector('.progress');
 const progressFilled = document.querySelector('.progress__filled');
